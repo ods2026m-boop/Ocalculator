@@ -1,0 +1,13 @@
+[package]
+name = "ocalc-finance"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+repository.workspace = true
+homepage.workspace = true
+description = "Finance toolkit for Ocalculator: interest, loans, growth"
+
+[dependencies]
+ocalc-number.workspace = true
+ocalc-modules.workspace = true

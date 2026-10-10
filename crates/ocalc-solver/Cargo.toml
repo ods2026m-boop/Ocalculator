@@ -1,0 +1,15 @@
+[package]
+name = "ocalc-solver"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+repository.workspace = true
+homepage.workspace = true
+description = "Equation and polynomial solver framework for Ocalculator"
+
+[dependencies]
+ocalc-number.workspace = true
+ocalc-matrix.workspace = true
+thiserror.workspace = true
+num-complex.workspace = true

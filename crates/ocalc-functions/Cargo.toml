@@ -1,0 +1,17 @@
+[package]
+name = "ocalc-functions"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+repository.workspace = true
+homepage.workspace = true
+description = "Mathematical functions and constants for Ocalculator"
+
+[dependencies]
+ocalc-number.workspace = true
+ocalc-modules.workspace = true
+thiserror.workspace = true
+num-traits.workspace = true
+num-complex.workspace = true
+serde.workspace = true
