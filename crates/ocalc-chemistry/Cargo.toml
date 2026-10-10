@@ -1,0 +1,13 @@
+[package]
+name = "ocalc-chemistry"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+repository.workspace = true
+homepage.workspace = true
+description = "Chemistry toolkit for Ocalculator: periodic table, formula parser, molecular weights"
+
+[dependencies]
+ocalc-number.workspace = true
+ocalc-modules.workspace = true

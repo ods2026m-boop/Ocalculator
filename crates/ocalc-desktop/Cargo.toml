@@ -1,0 +1,28 @@
+[package]
+name = "ocalc-desktop"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+repository.workspace = true
+homepage.workspace = true
+description = "Ocalculator desktop frontend (Iced) powered by the stable OCalc Engine"
+
+[[bin]]
+name = "ocalc-desktop"
+path = "src/main.rs"
+
+[dependencies]
+ocalc-engine.workspace = true
+ocalc-history.workspace = true
+ocalc-units.workspace = true
+ocalc-cas.workspace = true
+ocalc-physics.workspace = true
+ocalc-chemistry.workspace = true
+ocalc-finance.workspace = true
+ocalc-modules.workspace = true
+num-bigint.workspace = true
+num-traits.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+iced = { version = "0.14", features = ["canvas"] }

@@ -1,0 +1,13 @@
+[package]
+name = "ocalc-cas"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+repository.workspace = true
+homepage.workspace = true
+description = "Computer algebra system for Ocalculator: symbolic expressions, simplification, calculus, solving"
+
+[dependencies]
+ocalc-number.workspace = true
+ocalc-modules.workspace = true

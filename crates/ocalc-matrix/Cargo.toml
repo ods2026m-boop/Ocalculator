@@ -1,0 +1,18 @@
+[package]
+name = "ocalc-matrix"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+repository.workspace = true
+homepage.workspace = true
+description = "Matrix and vector foundation for Ocalculator: linear algebra primitives"
+
+[dependencies]
+ocalc-number.workspace = true
+thiserror.workspace = true
+serde.workspace = true
+
+[[bench]]
+name = "matrix"
+harness = false

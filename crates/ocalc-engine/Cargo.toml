@@ -1,0 +1,29 @@
+[package]
+name = "ocalc-engine"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+repository.workspace = true
+homepage.workspace = true
+description = "Core calculation engine for Ocalculator: lexer, parser, AST, evaluator, errors, graph"
+
+[dependencies]
+ocalc-number.workspace = true
+ocalc-functions.workspace = true
+ocalc-modules.workspace = true
+ocalc-units.workspace = true
+thiserror.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+
+[dev-dependencies]
+ocalc-history.workspace = true
+
+[[bench]]
+name = "parser"
+harness = false
+
+[[bench]]
+name = "evaluator"
+harness = false

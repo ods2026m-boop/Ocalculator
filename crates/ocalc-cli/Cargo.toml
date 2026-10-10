@@ -1,0 +1,28 @@
+[package]
+name = "ocalc-cli"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+repository.workspace = true
+homepage.workspace = true
+description = "Command line interface for Ocalculator"
+default-run = "ocalc"
+
+[[bin]]
+name = "ocalc"
+path = "src/main.rs"
+
+[dependencies]
+ocalc-engine.workspace = true
+ocalc-history.workspace = true
+ocalc-units.workspace = true
+ocalc-functions.workspace = true
+ocalc-modules.workspace = true
+ocalc-cas.workspace = true
+ocalc-physics.workspace = true
+ocalc-chemistry.workspace = true
+ocalc-finance.workspace = true
+clap.workspace = true
+rustyline.workspace = true
+serde_json.workspace = true
