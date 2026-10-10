@@ -1,0 +1,65 @@
+[workspace]
+members = [
+    "crates/ocalc-number",
+    "crates/ocalc-functions",
+    "crates/ocalc-modules",
+    "crates/ocalc-units",
+    "crates/ocalc-history",
+    "crates/ocalc-matrix",
+    "crates/ocalc-solver",
+    "crates/ocalc-engine",
+    "crates/ocalc-cli",
+    "crates/ocalc-desktop",
+    "crates/ocalc-cas",
+    "crates/ocalc-physics",
+    "crates/ocalc-chemistry",
+    "crates/ocalc-finance",
+]
+resolver = "2"
+
+[workspace.package]
+version = "1.0.0"
+edition = "2021"
+license = "MIT OR Apache-2.0"
+authors = ["Ocalculator Contributors"]
+repository = "https://github.com/ods-os/ocalculator"
+homepage = "https://github.com/ods-os/ocalculator"
+description = "Ocalculator — modular scientific calculator engine, CLI and desktop (ODS-os ready)"
+rust-version = "1.75"
+
+[workspace.dependencies]
+thiserror = "2"
+num-traits = "0.2"
+num-bigint = { version = "0.4", features = ["serde"] }
+num-complex = { version = "0.4", features = ["serde"] }
+num-rational = { version = "0.4", features = ["serde"] }
+rust_decimal = { version = "1", features = ["serde", "maths"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+chrono = { version = "0.4", features = ["serde"] }
+clap = { version = "4", features = ["derive"] }
+rustyline = "17"
+
+ocalc-number = { path = "crates/ocalc-number" }
+ocalc-functions = { path = "crates/ocalc-functions" }
+ocalc-modules = { path = "crates/ocalc-modules" }
+ocalc-units = { path = "crates/ocalc-units" }
+ocalc-history = { path = "crates/ocalc-history" }
+ocalc-matrix = { path = "crates/ocalc-matrix" }
+ocalc-solver = { path = "crates/ocalc-solver" }
+ocalc-engine = { path = "crates/ocalc-engine" }
+ocalc-cas = { path = "crates/ocalc-cas" }
+ocalc-physics = { path = "crates/ocalc-physics" }
+ocalc-chemistry = { path = "crates/ocalc-chemistry" }
+ocalc-finance = { path = "crates/ocalc-finance" }
+
+[profile.release]
+# Production v1.0.0: maximum optimization, single codegen unit + full LTO for
+# smallest/fastest binary, symbol stripping, abort on panic (no unwinding in
+# shipped artifacts). Debug builds use the default dev profile (unoptimized +
+# debuginfo + unwind) and keep working without changes.
+opt-level = 3
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = true
